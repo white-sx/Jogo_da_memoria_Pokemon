@@ -6,13 +6,29 @@
 
 body {
   font-family: 'Righteous', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  
 }
+
+#gameboard {
+	display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+}
+
+
 
 .card {
   width: 150px;
   height: 150px;
   transform-style: preserve-3d;
-  animation: transform .5s;
+  transition: transform .5s;
   position: relative;
 }
 
@@ -26,8 +42,7 @@ body {
   box-shadow: 10px 10px 10px rgba(0,0,0,0.45);
   backface-visibility: hidden;
   position: absolute;
-  top: 2.2em;
-  left: 2.2em;
+  
 }
 
 .icon {
@@ -36,11 +51,11 @@ body {
 }
 
 .flip {
-  transform: translateY(180deg);
+  transform: rotateY(180deg);
 }
 .card_front {
   background-color: #A63232;
-  transform: translateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .card_back {
