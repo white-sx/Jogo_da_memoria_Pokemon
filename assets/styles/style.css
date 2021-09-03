@@ -16,8 +16,8 @@ body {
 
 #gameboard {
 	display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(4, 1fr);
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 15px;
 grid-row-gap: 15px;
 }
@@ -51,7 +51,7 @@ grid-row-gap: 15px;
 }
 
 .flip {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) ;
 }
 .card_front {
   background-color: #A63232;
