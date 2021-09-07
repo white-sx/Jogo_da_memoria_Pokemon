@@ -53,13 +53,18 @@ function createCardFace(face, card, element) {
 
 
 function flipCard() {
-				console.log(game);
+				
 	if (game.setCard(this.id)) {
 		this.classList.add('flip')
-
+				
 		if (game.secondCard) {
 			if (game.checkMatch()) {
+			console.log(game.checkMatch())			
 				game.clearCard()
+				if (game.checkGameOver()) {
+                    let gameOverLayer = document.getElementById("gameover")
+                    gameOverLayer.style.display = 'flex'
+                }
 			} else {
 				setTimeout(() => {
 					let firstCardView = document.getElementById(game.firstCard.id)
@@ -67,9 +72,18 @@ function flipCard() {
 
 					firstCardView.classList.remove('flip')
 					secondCardView.classList.remove('flip')
-					game.clearCard();
-				}, 1000)
+					game.unflipCards()
+				}, 1000)				
 			}
 		}
 	}
+	
 }
+
+function restart() {
+    game.clearCard();
+    startGame();
+    let gameOverLayer = document.getElementById("gameover");
+    gameOverLayer.style.display = 'none';
+}
+
