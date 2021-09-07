@@ -109,14 +109,14 @@ body {
 
 	#gameover {
 
-		font-size: 2rem;
+		font-size: 1.5rem;
 
 	}
 
 @media(max-width: 435px) {
 
 		body {
-			background: fixed;
+			padding: 10px;
 		}
 
 		.card {
@@ -144,6 +144,42 @@ body {
 		#restart {
 			padding: 10px;
 			font-size: 1.2rem;
+			margin-top: 40px;
+
+		}
+
+	}
+
+@media(max-width: 320px) {
+
+body {
+				padding: 10px;
+}
+		.card {
+			width: 60px;
+			height: 60px;
+
+		}
+
+		#gameboard {
+
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			grid-column-gap: 5px;
+			grid-row-gap: 5px;
+
+
+		}
+
+		#gameover {
+
+			font-size: .6rem;
+
+		}
+
+		#restart {
+			padding: 10px;
+			font-size: 1rem;
 			margin-top: 40px;
 
 		}
