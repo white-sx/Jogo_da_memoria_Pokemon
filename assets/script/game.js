@@ -8,28 +8,26 @@ let game = {
   
     let card = this.cards.filter(card => card.id === id)[0];
 		
-    if (card.flipped || this.lockMode) {
-      return false;
-    }
+    if (card.flipped || this.lockMode) return false;
+    
 
     if (!this.firstCard) {
-      this.firstCard = card;
-      this.firstCard.flipped = true;
-      return true;
-    } else {
-      this.secondCard = card;
-      this.secondCard.flipped = true;
-      this.lockMode = true;
-      return true;
-    }
+            this.firstCard = card;
+            this.firstCard.flipped = true;
+            return true;
+        } else {
+            this.secondCard = card;
+            this.secondCard.flipped = true;
+            this.lockMode = true;
+            return true;
+        }
   },
 
 
   checkMatch: function () {
- if (!this.firstCard || !this.secondCard){return false;
+        if (!this.firstCard || !this.secondCard) return false;
         return this.firstCard.icon === this.secondCard.icon;
-    }
-  },
+    },
 
   clearCard: function() {
     this.firstCard = null;

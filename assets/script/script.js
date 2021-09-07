@@ -53,20 +53,23 @@ function createCardFace(face, card, element) {
 
 
 function flipCard() {
+				console.log(game);
 	if (game.setCard(this.id)) {
+		this.classList.add('flip')
 
-		this.classList.add("flip");
-		if (game.checkMatch()) {
-			game.clearCard();
-		} else {
-			setTimeout(() => {
-				let firstCardView = document.getElementById(game.firstCard.id)
-				let secondCardView = document.getElementById(game.secondCard.id)
+		if (game.secondCard) {
+			if (game.checkMatch()) {
+				game.clearCard()
+			} else {
+				setTimeout(() => {
+					let firstCardView = document.getElementById(game.firstCard.id)
+					let secondCardView = document.getElementById(game.secondCard.id)
 
-				firstCardView.classList.remove('flip');
-				secondCardView.classList.remove('flip');
-				game.clearCard();
-			}, 1000);
+					firstCardView.classList.remove('flip')
+					secondCardView.classList.remove('flip')
+					game.clearCard();
+				}, 1000)
+			}
 		}
 	}
 }
