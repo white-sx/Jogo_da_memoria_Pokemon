@@ -9,8 +9,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%
-	height: 100%
+	width: 100%;
+	height: 100%;
 
 }
 
@@ -20,7 +20,7 @@ body {
 	grid-template-rows: repeat(5, 1fr);
 	grid-column-gap: 15px;
 	grid-row-gap: 15px;
-	margin-top: 50%;
+	margin-top: 15px;
 }
 
 
@@ -104,7 +104,7 @@ body {
 		grid-template-rows: repeat(4, 1fr);
 		grid-row-gap: 10px;
 		grid-column-gap: 10px;
-
+		margin-top: 17%;
 	}
 
 	#gameover {
@@ -131,7 +131,7 @@ body {
 			grid-template-rows: repeat(5, 1fr);
 			grid-column-gap: 8px;
 			grid-row-gap: 8px;
-
+			margin-top: 26%;
 
 		}
 
@@ -152,9 +152,9 @@ body {
 
 @media(max-width: 320px) {
 
-body {
-				padding: 10px;
-}
+		body {
+			padding: 10px;
+		}
 		.card {
 			width: 60px;
 			height: 60px;
@@ -167,13 +167,14 @@ body {
 			grid-template-rows: repeat(5, 1fr);
 			grid-column-gap: 5px;
 			grid-row-gap: 5px;
-
+			margin-top: 50%;
 
 		}
 
 		#gameover {
 
 			font-size: .6rem;
+
 
 		}
 
