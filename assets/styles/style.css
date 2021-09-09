@@ -22,13 +22,15 @@ body {
 	grid-column-gap: 15px;
 	grid-row-gap: 15px;
 	margin-top: 15px;
+	padding: 30px 0;
+	
 }
 
 
 
 .card {
-	width: 140px;
-	height: 140px;
+	width: 130px;
+	height: 130px;
 	transform-style: preserve-3d;
 	transition: transform .5s;
 	position: relative;
